@@ -17,13 +17,14 @@ for d in [FIGURES_DIR, WEKA_DIR, GENE_LIST_DIR]:
     os.makedirs(d, exist_ok=True)
 
 # DATA SOURCE
-# UCSC Xenabrowser hosts pre-processed TCGA data
-# This URL gives us log2(FPKM+1) gene expression for TCGA-PRAD
+# UCSC Xena TCGA Hub — legacy hg19 gene expression RNAseq (IlluminaHiSeq)
+# Unit: log2(RSEM norm_count + 1), 20,531 Hugo gene symbols × 550 samples
+# Dataset ID: TCGA.PRAD.sampleMap/HiSeqV2
 EXPRESSION_URL = (
-    "https://gdc-hub.s3.us-east-1.amazonaws.com/download/"
-    "TCGA-PRAD.htseq_fpkm.tsv.gz"
+    "https://tcga-xena-hub.s3.us-east-1.amazonaws.com/download/"
+    "TCGA.PRAD.sampleMap%2FHiSeqV2.gz"
 )
-EXPRESSION_FILENAME = "TCGA-PRAD_expression.tsv.gz"
+EXPRESSION_FILENAME = "TCGA-PRAD_HiSeqV2.gz"
 
 # TCGA BARCODE RULES 
 # Every TCGA sample has a barcode like: TCGA-XX-XXXX-01A-...
