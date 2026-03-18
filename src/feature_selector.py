@@ -118,7 +118,7 @@ def select_at_all_levels(df, ranking, gene_counts=GENE_COUNTS):
     return results
 
 
-# === Quick test when run directly ===
+# Quick test when run directly 
 if __name__ == "__main__":
     import sys
     sys.path.insert(0, ".")
